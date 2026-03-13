@@ -1,5 +1,9 @@
+version: '3.8'
+
 services:
-  my-web-app:
-    build: .
+  frontend:
+    image: nattapat23/test:latest
+    pull_policy: always
     ports:
-      - "8080:80"
+      - "8081:8080"
+    restart: unless-stopped
